@@ -1,7 +1,8 @@
 
+ 
  export const Nodes = [
   { id: "1", position: { x: 0, y: 0 }, data: { label: "Front-end" }, style: { background: "white", border: "none" } },
-  { id: "2", position: { x: 0, y: 100 }, data: { label: "Internet" },sourcePosition:"top", style: { background: "yellow" } },
+  { id: "2", position: { x: 0, y: 100 }, data: { label: "Internet" }, type: "twoSourceOneTarget", style: { background: "yellow" } },
   { id: "3", position: { x: 0, y: 200 }, data: { label: "HTML" },targetPosition: "top", style: { background: "yellow" } },
   { id: "4", position: { x: 350, y: -50 }, data: { label: "How does the internet work?" },targetPosition:"left", style: { background: "#FFE599" ,Maxwidth:"30%"} },
   { id: "5", position: { x: 350, y: 20 },  data: { label: "What is HTTP?" },targetPosition:"left", style: { background: "#FFE599" } },

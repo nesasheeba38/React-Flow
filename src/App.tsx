@@ -3,6 +3,7 @@ import ReactFlow, { Background, Controls, MiniMap} from "reactflow";
 import "reactflow/dist/style.css";
 import{ Nodes }from './WorkFlow/Node';
 import{ Edges }from'./WorkFlow/Edges';
+import { NodeTypes} from "./WorkFlow/NodeType";
 
 function CustomNode({data}:any){
   return(
@@ -34,7 +35,7 @@ export default function App() {
   const nodeType={custom:CustomNode};
   return (
     <div style={{ width: "100%", height: "100vh" }}>
-      <ReactFlow nodes={Nodes} edges={Edges} nodeTypes={nodeType}fitView>
+      <ReactFlow nodes={Nodes} edges={Edges} NodeTypes={NodeTypes} fitView>
        <Background/>
         <MiniMap/>
         <Controls/> 
