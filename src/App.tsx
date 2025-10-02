@@ -3,39 +3,25 @@ import ReactFlow, { Background, Controls, MiniMap} from "reactflow";
 import "reactflow/dist/style.css";
 import{ Nodes }from './WorkFlow/Node';
 import{ Edges }from'./WorkFlow/Edges';
-import { NodeTypes} from "./WorkFlow/NodeType";
+import { nodeTypes } from "./WorkFlow/NodeType";
+import{ nodeTypes as existingNodeTypes}from "./WorkFlow/NodeType"
 
 function CustomNode({data}:any){
   return(
-    <div
-    style={{
-      fontSize:15,
-      padding:10,
-      margin:20,
-      width:268,
-      border:"2px solid #f0e9e9ff",
-      backgroundColor:"#ffffffff",
-      borderRadius:10,
-    }}>
-   <p>{data.label}</p>
-   <button
-   style={{
-    padding:"8px 10px",
-    backgroundColor:"#f0eeeeff",
-    borderRadius:6,
-    width:260,
-    border:"2px solid white",
-    fontStyle:"serif"
-   }}>Beginner Project Ideas</button>   
+    <div style={{padding:10,border:"2px solid #999999",borderRadius:10,background:"white",textAlign:"center",width:268}}
+    >
+      <p>{data.label}</p>
+      <button 
+      style={{border:"2px solid #ffff",width:223,height:33,backgroundColor:"#cfceceff"}}>Beginner Project Ideas</button>
     </div>
   )
 }
-
 export default function App() {
-  const nodeType={custom:CustomNode};
+
+  const nodeTypes={ ...existingNodeTypes,custom:CustomNode};
   return (
     <div style={{ width: "100%", height: "100vh" }}>
-      <ReactFlow nodes={Nodes} edges={Edges} NodeTypes={NodeTypes} fitView>
+      <ReactFlow nodes={Nodes} edges={Edges} nodeTypes={nodeTypes} fitView>
        <Background/>
         <MiniMap/>
         <Controls/> 
