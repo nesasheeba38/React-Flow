@@ -1,5 +1,5 @@
-import { TwoSourceOneTargetHandle } from "../handles/TwoSourceOneTargetHandle";
-import { AutoHandle } from "../handles/AutoHandle";
+import { TwoSourceOneTargetHandle } from "../Handle/TwoSourceOneTargetHandle";
+import { AutoHandle } from "../Handle/AutoHandle";
 
 // Registering the custom node types
 

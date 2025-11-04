@@ -7,18 +7,27 @@ export const TwoSourceOneTargetHandle = ({data}:any) => {
         <Handle
             type="source"
             id="bottom-source"
-            position={Position.Bottom}
-        />
+            position={Position.Bottom}/>
         <Handle
             type="target"
             id="top-target"
-            position={Position.Top}
-        />
+            position={Position.Top}/>
         <Handle
             type="source"
             id="right-source"
-            position={Position.Right}
-        />
+            position={Position.Right}/>
+         <Handle
+            type="source"
+            id="top-source"
+            position={Position.Top}/>
+        <Handle
+            type="target"
+            id="right-target"
+            position={Position.Right} />
+        <Handle
+           type="source"
+           id="left-source"
+           position={Position.Left}/>
         </div>
     )
-}
+} 
